@@ -1,0 +1,12 @@
+
+def calcularPi(n):
+   numerador= ((-1)**n)
+   denominador = ((2*n +1))
+   resultado = numerador / denominador
+   return (resultado)
+sumatoria = 0
+for i in range (0,100000):
+    sumatoria = sumatoria + calcularPi(i)
+pi = sumatoria * 4
+print (pi)
+    
