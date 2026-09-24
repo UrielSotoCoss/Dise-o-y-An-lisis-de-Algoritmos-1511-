@@ -1,0 +1,42 @@
+
+const el = 8;
+class Nodo {
+    constructor(value) {
+        this.value = value;
+        this.next = null;
+    }
+}
+
+
+const nodo1 = new Nodo(11);
+const nodo2 = new Nodo(2);
+const nodo3 = new Nodo(8);
+const nodo4 = new Nodo(7);
+
+
+nodo1.next = nodo2;
+nodo2.next = nodo3;
+nodo3.next = nodo4;
+
+
+
+function busquedaLista(head, elemento) {
+    let actual = head;
+
+ 
+    while (actual !== null) {
+        if (actual.value === elemento) {
+         
+          return true;  
+        }
+        actual = actual.next;  
+    }
+
+    return false; 
+}
+
+console.log(busquedaLista(nodo1, 7))
+console.log(busquedaLista(nodo1, el))
+console.log(busquedaLista(nodo1, 20))
+console.log(busquedaLista(nodo1, 8))
+console.log(busquedaLista(nodo1, 30))
